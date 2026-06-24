@@ -1,22 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pemesanan — Okinawa Sushi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <title> Formulir Pemesanan </title>
-    <form action="pemesanan.php" method="post"> Nama Lengkap <br> <input type="text" name="nama"> <br> <br> Tanggal pemesanan <br> <input type="date" name="tanggalpemesanan"><br> <br> Menu <br> <select name="menu"><option value="1">Salmon sushi</option>
-        <option value="2">Maki sushi</option>
-        <option value="3">Uramaki</option>
-        <option value="4">Gunkanmaki</option>
-        <option value="5">Inarizushi</option>
-        <option value="6">Oshizushi</option>
-        <option value="7">Sasazushi</option></select><br> <br> extra kecap asin <br> <input type="radio" name="extra" value="Iya">Iya <input type="radio" name="extra" value="tidak">tidak <br> <br>dine <br> <input type="checkbox" name="ref1" value="Dine in">Dine in <br><input type="checkbox" name="ref2" value="Bungkus">Bungkus <br><br> bukti transaksi <br> <input type="file" name="foto" value="Bukti transaksi">Bukti transaksi <br> <br> alamat <br> <textarea name="alamat" cols="30" rows="10"></textarea> <br></form>
-        
+
+    <!-- NAVIGASI -->
+    <nav>
+        <a href="index.html" class="logo">🍣 OKINAWA SUSHI</a>
+        <ul>
+            <li><a href="index.html">Menu</a></li>
+            <li><a href="ordering.html" class="active">Pemesanan</a></li>
+            <li><a href="profile.html">Profil</a></li>
+            <li><a href="hubungi.html">Hubungi</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <h1>PEMESANAN</h1>
+        <p>Isi formulir di bawah untuk memesan menu favorit Anda</p>
+    </header>
+
+    <div class="container">
+
+        <section>
+            <h1>Formulir Pemesanan</h1>
+            <p>Lengkapi semua data di bawah ini. Pesanan akan dikonfirmasi melalui <abbr title="WhatsApp atau telepon">kontak</abbr> Anda.</p>
+
+            <div class="form-wrapper">
+                <form action="pemesanan.php" method="post" enctype="multipart/form-data">
+
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telepon">Nomor Telepon</label>
+                        <input type="text" id="telepon" name="telepon" placeholder="Contoh: 08123456789">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tanggal">Tanggal Pemesanan</label>
+                        <input type="date" id="tanggal" name="tanggalpemesanan" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="menu">Pilih Menu</label>
+                        <select id="menu" name="menu">
+                            <option value="" disabled selected>-- Pilih menu --</option>
+                            <option value="1">Sushi Salmon</option>
+                            <option value="2">Maki Sushi</option>
+                            <option value="3">Uramaki</option>
+                            <option value="4">Gunkanmaki</option>
+                            <option value="5">Inarizushi</option>
+                            <option value="6">Oshizushi</option>
+                            <option value="7">Sasazushi</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jumlah">Jumlah Porsi</label>
+                        <input type="number" id="jumlah" name="jumlah" min="1" max="20" placeholder="1" style="width:100%;padding:10px 14px;border:1px solid #ccc;border-radius:6px;font-size:0.95rem;background:#fdf6ee;">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Extra Kecap Asin</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="extra" value="Iya"> Iya</label>
+                            <label><input type="radio" name="extra" value="Tidak" checked> Tidak</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Jenis Pemesanan</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="ref1" value="Dine in"> Dine In</label>
+                            <label><input type="checkbox" name="ref2" value="Bungkus"> Bungkus / Takeaway</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="foto">Bukti Transaksi</label>
+                        <input type="file" id="foto" name="foto" accept="image/*" style="width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;background:#fdf6ee;">
+                        <small style="color:#999;font-size:0.82rem;">Upload screenshot / foto bukti pembayaran (jpg, png)</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="alamat">Alamat Pengiriman</label>
+                        <textarea id="alamat" name="alamat" placeholder="Isi alamat lengkap jika memilih bungkus / delivery"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="catatan">Catatan Tambahan</label>
+                        <textarea id="catatan" name="catatan" placeholder="Contoh: tidak pedas, tanpa wasabi, dll." style="min-height:60px;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Kirim Pesanan</button>
+
+                </form>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- INFO PEMESANAN -->
+        <section>
+            <h1>Informasi Pemesanan</h1>
+            <h2>Jam Operasional</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hari</th>
+                        <th>Jam Buka</th>
+                        <th>Jam Tutup</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Senin – Jumat</td>
+                        <td>10.00 WIB</td>
+                        <td>21.00 WIB</td>
+                    </tr>
+                    <tr>
+                        <td>Sabtu</td>
+                        <td>09.00 WIB</td>
+                        <td>22.00 WIB</td>
+                    </tr>
+                    <tr>
+                        <td>Minggu</td>
+                        <td>10.00 WIB</td>
+                        <td>20.00 WIB</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Ketentuan Pemesanan</h2>
+            <ol>
+                <li>Pemesanan dapat dilakukan minimal <strong>1 jam sebelum</strong> kedatangan.</li>
+                <li>Pembayaran dapat dilakukan via <mark>transfer bank, QRIS, atau tunai</mark>.</li>
+                <li>Pesanan delivery membutuhkan minimal pembelian Rp 50.000.</li>
+                <li>Bukti transaksi wajib diunggah untuk memvalidasi pesanan.</li>
+            </ol>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 <span>Okinawa Sushi</span> — Palembang, Indonesia</p>
+    </footer>
+
 </body>
-</html><img src="https://tse2.mm.bing.net/th/id/OIP.A6IsvjAenj85f5Dv1qv7NQHaE2?pid=Api&P=0&h=220" alt="sushi width="140px" height="80px">
-<img src="https://www.freshfarms.com/wp-content/uploads/2023/03/Exploring-the-Different-Types-of-Sushi-for-Flavorful-and-Unique-Experiences.jpg" alt="sushi" width="140px" height="80px">
-<img src="https://tse2.mm.bing.net/th/id/OIP.nCUBYX929CZ5QsKwk0YTKwHaE6?pid=Api&P=0&h=220" alt="sushi" width="140px" height="80px">
-<img src="https://thumbs.dreamstime.com/b/assorted-sushi-nigiri-maki-big-set-slate-variety-japanese-tuna-crab-salmon-eel-rolls-top-view-asian-cuisine-photo-274087209.jpg" alt="sushi" width="140px" height="80px">
+</html>

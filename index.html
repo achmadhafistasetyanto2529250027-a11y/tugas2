@@ -1,42 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Menu — Sushi</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <title> Sushi Restorant </title>
-    <h1> Menu </h1>
-    <ol type="1"> <li> Sushi Salmon </li>
-    <p> Nasi dengan toping ikan salmon segar</p>
-    <li> Maki sushi </li>
-    <p> Sushi dengan timun</p>
-    <li> Uramaki </li>
-    <p> Sushi dengan crabstick </p>
-    <li> Gunkanmaki </li>
-    <p>  Nasi dengan toping telur salmon </p>
-    <li> Inarizushi </li>
-    <p> Nasi yang dimasukkan kedalam kantung tahu </p>
-    <li> Oshizushi </li>
-    <p> Sushi tekan </p>
-    <li> Sasazushi </li>
-    <p> Sushi dibungkus dengan daun bambu </p>
-    </ol>
 
+    <!-- NAVIGASI -->
+    <nav>
+        <a href="index.html" class="logo">🍣 SUSHI</a>
+        <ul>
+            <li><a href="index.html" class="active">Menu</a></li>
+            <li><a href="ordering.html">Pemesanan</a></li>
+            <li><a href="profile.html">Profil</a></li>
+            <li><a href="hubungi.html">Hubungi</a></li>
+        </ul>
+    </nav>
 
+    <!-- HERO -->
+    <header class="hero">
+        <h1>OKINAWA SUSHI</h1>
+        <p>Sushi berkualitas tinggi — ikan segar, nasi premium, sayuran pilihan</p>
+    </header>
 
+    <div class="container">
 
+        <!-- GALERI FOTO -->
+        <section>
+            <h1>Galeri</h1>
+            <div class="gallery">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.A6IsvjAenj85f5Dv1qv7NQHaE2?pid=Api&P=0&h=220" alt="Sushi Salmon">
+                <img src="https://www.freshfarms.com/wp-content/uploads/2023/03/Exploring-the-Different-Types-of-Sushi-for-Flavorful-and-Unique-Experiences.jpg" alt="Aneka Sushi">
+                <img src="https://tse2.mm.bing.net/th/id/OIP.nCUBYX929CZ5QsKwk0YTKwHaE6?pid=Api&P=0&h=220" alt="Sushi Roll">
+                <img src="https://thumbs.dreamstime.com/b/assorted-sushi-nigiri-maki-big-set-slate-variety-japanese-tuna-crab-salmon-eel-rolls-top-view-asian-cuisine-photo-274087209.jpg" alt="Sushi Set">
+            </div>
+        </section>
 
+        <hr>
 
-    <h1> Layanan </h1>
-    <h2> sushi dengan kualitas terbaik, ikan segar,nasi premium, dengan sayur yang enak</h2>
+        <!-- KUTIPAN -->
+        <blockquote>
+            "Setiap gigitan adalah perpaduan sempurna antara tradisi Jepang dan bahan-bahan segar pilihan."
+        </blockquote>
 
-    <a href="hubungi.html">Hubungi</a>
-    <p> </p>
-    <a href="ordering.html">Pemesanan</a>
-    <p> </p>
-    <a href="profile.html">Profil</a>
-    
+        <!-- MENU CARDS -->
+        <section>
+            <h1>Menu Kami</h1>
+            <p>Semua menu dibuat segar setiap hari menggunakan bahan-bahan berkualitas.</p>
+
+            <div class="menu-grid">
+
+                <div class="menu-card">
+                    <span class="menu-number">1</span>
+                    <h3>Sushi Salmon <span class="badge">Terlaris</span></h3>
+                    <p>Nasi dengan topping ikan salmon segar, tekstur lembut dan kaya omega-3.</p>
+                </div>
+
+                <div class="menu-card">
+                    <span class="menu-number">2</span>
+                    <h3>Maki Sushi</h3>
+                    <p>Sushi gulung dengan isian timun segar, disajikan dengan kecap asin dan wasabi.</p>
+                </div>
+
+                <div class="menu-card">
+                    <span class="menu-number">3</span>
+                    <h3>Uramaki</h3>
+                    <p>Sushi gulung terbalik dengan isian <abbr title="Daging kepiting imitasi">crabstick</abbr>, nasi di luar.</p>
+                </div>
+
+                <div class="menu-card">
+                    <span class="menu-number">4</span>
+                    <h3>Gunkanmaki</h3>
+                    <p>Nasi dibalut nori berbentuk kapal, diisi topping <mark>telur salmon</mark> yang mewah.</p>
+                </div>
+
+                <div class="menu-card">
+                    <span class="menu-number">5</span>
+                    <h3>Inarizushi</h3>
+                    <p>Nasi sushi yang dimasukkan ke dalam kantung tahu goreng manis.</p>
+                </div>
+
+                <div class="menu-card">
+                    <span class="menu-number">6</span>
+                    <h3>Oshizushi</h3>
+                    <p>Sushi tekan — nasi dan topping dipadatkan dalam cetakan kotak tradisional.</p>
+                </div>
+
+                <div class="menu-card">
+                    <span class="menu-number">7</span>
+                    <h3>Sasazushi</h3>
+                    <p>Sushi khas dibungkus daun bambu, memberikan aroma alami yang khas.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- TABEL HARGA -->
+        <section>
+            <h1>Daftar Harga</h1>
+            <table>
+                <caption>Harga menu per porsi (belum termasuk pajak)</caption>
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Menu</th>
+                        <th>Isi</th>
+                        <th>Harga</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Sushi Salmon</td>
+                        <td>2 pcs</td>
+                        <td>Rp 35.000</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Maki Sushi</td>
+                        <td>6 pcs</td>
+                        <td>Rp 28.000</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Uramaki</td>
+                        <td>6 pcs</td>
+                        <td>Rp 32.000</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Gunkanmaki</td>
+                        <td>2 pcs</td>
+                        <td>Rp 38.000</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Inarizushi</td>
+                        <td>4 pcs</td>
+                        <td>Rp 25.000</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Oshizushi</td>
+                        <td>4 pcs</td>
+                        <td>Rp 30.000</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Sasazushi</td>
+                        <td>3 pcs</td>
+                        <td>Rp 27.000</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- LAYANAN -->
+        <section>
+            <h1>Layanan</h1>
+            <h2>Mengapa Memilih Kami?</h2>
+            <ul>
+                <li><strong>Bahan Segar</strong><p>Ikan didatangkan setiap hari dari pemasok terpercaya.</p></li>
+                <li><strong>Nasi Premium</strong><p>Menggunakan beras Jepang dengan tekstur yang sempurna.</p></li>
+                <li><strong>Chef Berpengalaman</strong><p>Tim chef terlatih dengan pengalaman lebih dari 5 tahun.</p></li>
+                <li><strong>Dine In & Takeaway</strong><p>Nikmati di tempat atau bawa pulang sesuai kenyamanan Anda.</p></li>
+            </ul>
+        </section>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 <span>Okinawa Sushi</span> — Palembang, Indonesia</p>
+    </footer>
+
 </body>
 </html>
